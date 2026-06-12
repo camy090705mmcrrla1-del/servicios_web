@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+
+</head>
+<body class="bg-light">
+
+<div class="container mt-5">
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-4">
+
+            <div class="card shadow">
+
+                <div class="card-header text-center">
+                    <h3>Iniciar Sesión</h3>
+                </div>
+
+                <div class="card-body">
+
+                    {% if mensaje %}
+                        <div class="alert alert-danger">
+                            {{ mensaje }}
+                        </div>
+                    {% endif %}
+
+                    <form method="POST">
+
+                        <label>Usuario</label>
+
+                        <input
+                            type="text"
+                            name="nombre"
+                            class="form-control"
+                            required
+                        >
+
+                        <br>
+
+                        <label>Contraseña</label>
+
+                        <input
+                            type="password"
+                            name="password"
+                            class="form-control"
+                            required
+                        >
+
+                        <br>
+
+                        <button
+                            class="btn btn-primary w-100">
+                            Entrar
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
